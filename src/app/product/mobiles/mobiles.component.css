@@ -1,0 +1,17 @@
+.hide-product-added {
+  position: fixed;
+  height: 50px;
+  width: 350px;
+  background: #080;
+  line-height: 50px;
+  border-radius: 30px;
+  color: #fff;
+  padding-left: 25px;
+  transition: all 0.8s linear;
+  bottom: -100px;
+  opacity: 0%;
+}
+.product-added {
+  bottom: 50px;
+  opacity: 1;
+}

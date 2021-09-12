@@ -1,0 +1,45 @@
+.header {
+  height: 60px;
+}
+.header img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+.header h4 {
+  padding-top: 10px;
+}
+.user-data {
+  box-shadow: 1px 1px 3px #ccc, -1px -1px 3px #ccc;
+  border-radius: 30px;
+  padding: 25px;
+}
+.user-data > div {
+  margin: 25px auto;
+}
+.user-data > div > i {
+  height: 40px;
+  width: 40px;
+  float: left;
+  border-radius: 50%;
+  line-height: 40px;
+  box-shadow: 1px 1px 3px #ccc, -1px -1px 3px #ccc;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 30px;
+}
+.user-data > div > p {
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+}
+button {
+  padding: 0px 25px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: #ddd;
+  color: #000;
+  border: none;
+}

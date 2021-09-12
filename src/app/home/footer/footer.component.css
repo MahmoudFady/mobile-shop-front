@@ -1,0 +1,13 @@
+section.footer {
+  width: 100%;
+  padding: 25px;
+  height: 100px;
+  background-color: rgb(29, 28, 28);
+  text-align: center;
+  color: #fff;
+}
+h6 {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 4px;
+}

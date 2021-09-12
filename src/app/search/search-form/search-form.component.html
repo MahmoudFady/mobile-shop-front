@@ -1,0 +1,32 @@
+<div class="form-container">
+  <form #f="ngForm" (ngSubmit)="search(f)">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-4 col-md-5 col-lg-3">
+        <div class="form-group">
+          <label>category</label>
+          <select class="form-control" ngModel="mobile" name="category">
+            <option value="mobile" selected>mobile</option>
+            <option value="computer">computer</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-5 col-lg-3">
+        <div class="form-group">
+          <label>brand</label>
+          <select class="form-control" ngModel="oppo" name="brand">
+            <option value="oppo">oppo</option>
+            <option value="apple">apple</option>
+            <option value="sumsung">sumsung</option>
+            <option value="realme">realme</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-2 col-lg-2">
+        <label></label>
+        <div class="form-group">
+          <button class="btn"><i class="fa fa-search"></i> search</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

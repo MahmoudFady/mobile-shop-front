@@ -1,0 +1,54 @@
+.row {
+  margin-top: 50px;
+}
+.row > div {
+  margin: 12.5px auto;
+}
+form > div {
+  margin: 25px auto;
+}
+
+form input,
+form button {
+  width: 80%;
+  display: inline-block;
+  height: 45px;
+  border-radius: 30px;
+  margin-left: 10px;
+  border: 1.5px solid #ddd;
+}
+form div i {
+  height: 45px;
+  width: 45px;
+  box-shadow: 1px 1px 5px #ddd, -1px -1px 5px #ddd;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  color: rgb(0, 0, 0);
+}
+strong a,
+.inp-error p strong {
+  color: #f00;
+  text-decoration: none;
+  font-size: 14px;
+}
+form button {
+  border: none;
+  background-color: var(--mainColor);
+  color: #fff;
+  font-weight: bold;
+  width: calc(80% + 10px + 40px);
+}
+.inp-error p {
+  padding-left: 60px;
+}
+div.alert {
+  height: 45px;
+  padding: 0px;
+  width: calc(45px + 10px + 1.5px + 80%);
+  border: none;
+  border-radius: 30px;
+  line-height: 45px;
+  padding-left: 20px;
+  font-weight: bold;
+}

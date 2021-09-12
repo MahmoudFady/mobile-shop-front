@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-sm-12 col-md-6 col-lg-4">
+      <app-product
+        [product]="product"
+        (productAdded)="onProductAdded($event)"
+      ></app-product>
+    </div>
+    <div
+      class="hide-product-added col-md-4"
+      [ngClass]="{ 'product-added': productAdded }"
+    >
+      <div>
+        <p>
+          <strong> <i class="fa fa-check"></i> product added to cart</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

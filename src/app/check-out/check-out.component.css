@@ -1,0 +1,25 @@
+.container > .row form > div {
+  margin: 25px auto;
+}
+.container > .row > div h2 {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+.container > .row > div.form-container {
+  box-shadow: 1px 1px 3px #ccc, -1px -1px 3px #ccc;
+  border-radius: 30px;
+  margin-bottom: 50px;
+}
+.container .row form > div input,
+.container .row form > div button {
+  height: 45px;
+  border-radius: 30px;
+}
+label {
+  margin: 10px;
+  color: #333 !important;
+}
+.inner-row > div {
+  margin-bottom: 25px;
+}

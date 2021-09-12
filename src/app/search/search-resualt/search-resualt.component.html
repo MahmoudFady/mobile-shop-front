@@ -1,0 +1,20 @@
+<div class="row justify-content-center align-content-center search-resualt">
+  <div class="row" *ngIf="products.length && isSearchFired">
+    <div class="col-md-12">
+      <h1 class="text-center">{{ products.length }} product founded</h1>
+    </div>
+    <div class="col-md-4" *ngFor="let product of products">
+      <app-product [product]="product"></app-product>
+    </div>
+  </div>
+  <div class="text-center col-md-6" *ngIf="!products.length && isSearchFired">
+    <h1>no products founded</h1>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXQpJnnPzhDYwOTr9S8quxVfMhbjcWiD9Haw&usqp=CAU"
+      alt=""
+    />
+  </div>
+  <div class="text-center col-md-6" *ngIf="!isSearchFired">
+    <h1>search for your fav products</h1>
+  </div>
+</div>

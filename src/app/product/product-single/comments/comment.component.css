@@ -1,0 +1,91 @@
+section {
+  margin-top: 50px;
+}
+.add-comment {
+  margin-bottom: 25px;
+  padding: 10px;
+}
+.add-comment input {
+  height: 40px;
+  width: 80%;
+  border-radius: 20px 0px 0px 20px;
+  border: 1.5px solid #ddd;
+  float: left;
+  text-indent: 15px;
+}
+.add-comment button {
+  height: 40px;
+  width: 20%;
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+  background-color: var(--mainColor);
+  color: #fff;
+}
+.comments-list {
+  height: 550px;
+  overflow: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: 10px;
+  scrollbar-track-color: #f1f1f1;
+}
+.comments-list h4 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.comment-single {
+  padding: 25px;
+  box-shadow: 1px 1px 5px #ccc, -1px -1px 5px #ccc;
+  border-radius: 20px;
+  margin-bottom: 25px;
+}
+.comment-single div img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+}
+.comment-single h6 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.comment-single p {
+  background-color: #ddd;
+  padding: 5px 10px;
+  border-radius: 0px 30px 30px 30px;
+  margin-top: 10px;
+  margin-left: 50px;
+  width: fit-content;
+  font-size: 14px;
+}
+.alert {
+  font-weight: bold;
+  border: none;
+}
+.alert h6 {
+  font-size: 18px;
+}
+.no-comments h4 {
+  font-weight: bold;
+}

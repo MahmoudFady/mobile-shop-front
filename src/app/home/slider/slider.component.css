@@ -1,0 +1,38 @@
+.carousel-indicators [data-bs-target] {
+  text-indent: 0;
+  height: 30px;
+  background-color: none !important;
+  border: none;
+  border-radius: 50%;
+  color: #000;
+}
+.carousel-indicators {
+  justify-content: flex-start;
+}
+.carousel-indicators button.active {
+  background-color: var(--mainColor);
+  color: #fff;
+}
+.carousel-item {
+  height: 400px;
+}
+.carousel-item img {
+  height: 100%;
+}
+.carousel-item .carousel-caption {
+  top: 50px;
+  left: 50px;
+  text-align: left;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: fit-content;
+  height: fit-content;
+}
+button {
+  height: 40px;
+  width: 150px;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--mainColor);
+  color: #fff;
+}

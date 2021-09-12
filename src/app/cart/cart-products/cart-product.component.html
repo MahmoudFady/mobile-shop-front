@@ -1,0 +1,62 @@
+<div *ngIf="cart" class="cart-products">
+  <div class="header">
+    <h1>shopping cart</h1>
+    <p>
+      <strong> {{ cart.productCount }} items </strong>
+    </p>
+  </div>
+  <table class="table table-borderless table-striped table-responsive">
+    <tbody>
+      <tr *ngFor="let product of cart.products">
+        <td>
+          <img width="40px" height="40px" [src]="product.images[0]" alt="" />
+        </td>
+        <td>{{ product.brand }} {{ product.model }}</td>
+        <td>{{ calcPrice(product.price, product.discount) }} $</td>
+        <td class="info">
+          <a routerLink="/products/{{ product._id }}"
+            ><i class="fa fa-info"></i
+          ></a>
+        </td>
+        <td class="del">
+          <a
+            (click)="
+              removeProduct(product._id, product.price, product.discount)
+            "
+            ><i class="fa fa-trash"></i
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="header">
+    <h1>total price</h1>
+    <p>
+      <strong>{{ cart.price }} $</strong>
+    </p>
+  </div>
+  <div class="cart-btns">
+    <button class="btn">
+      <a> <i class="fa fa-cart-plus"></i> continue shopping</a>
+    </button>
+    <button class="btn">
+      <a (click)="onCheckOut()">
+        <i class="fa fa-credit-card"></i> checkout now</a
+      >
+    </button>
+  </div>
+</div>
+<div *ngIf="!cart" class="no-cart">
+  <h1>shopping cart is empty !</h1>
+  <button class="btn">
+    <a routerLink="/home"> <i class="fa fa-cart-plus"></i> shopping now</a>
+  </button>
+</div>
+<div
+  class="alert alert-danger"
+  [ngClass]="{ 'product-deleted': productDeleted }"
+>
+  <p>
+    <strong> <i class="fa fa-trash"></i> product deleted</strong>
+  </p>
+</div>

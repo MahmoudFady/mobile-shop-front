@@ -1,0 +1,24 @@
+<div class="user-data">
+  <div class="header">
+    <img [src]="user.image" alt="" />
+    <h4>{{ user.name }}</h4>
+  </div>
+  <div>
+    <i class="fa fa-envelope"></i>
+    <p>{{ user.email }}</p>
+  </div>
+  <div>
+    <i class="fa fa-phone"></i>
+    <p>{{ user.phone }}</p>
+  </div>
+  <div>
+    <i class="fa fa-map-marker-alt"></i>
+    <p>
+      {{ user.address.country }} , {{ user.address.state }} ,
+      {{ user.address.city }}
+    </p>
+  </div>
+  <div>
+    <button><i class="fa fa-edit"></i> edit</button>
+  </div>
+</div>

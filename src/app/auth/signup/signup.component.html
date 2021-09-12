@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="row flex-column align-items-center">
+    <div class="col-sm-6 col-md-6">
+      <h2><i class="fa fa-user-plus"></i> signup</h2>
+    </div>
+    <div *ngIf="signupErrMsg" class="col-sm-6 col-md-6">
+      <div class="alert alert-danger">
+        <p>
+          {{ signupErrMsg }}
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6">
+      <form [formGroup]="signupData" (ngSubmit)="signup()">
+        <div class="form-group">
+          <i class="fa fa-user"></i>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="full name..."
+            formControlName="name"
+          />
+        </div>
+        <div
+          class="form-group inp-error"
+          *ngIf="f.name.touched && f.name.invalid"
+        >
+          <p>
+            <strong *ngIf="f.name.errors?.required">full name required</strong>
+          </p>
+        </div>
+        <div class="form-group">
+          <i class="fa fa-envelope"></i>
+          <input
+            class="form-control"
+            type="email"
+            placeholder="email..."
+            formControlName="email"
+          />
+        </div>
+        <div
+          class="form-group inp-error"
+          *ngIf="f.email.touched && f.email.invalid"
+        >
+          <p>
+            <strong *ngIf="f.email.errors?.required">email required</strong>
+            <strong *ngIf="f.email.errors?.email">email invalid</strong>
+          </p>
+        </div>
+        <div class="form-group">
+          <i class="fa fa-phone"></i>
+          <input
+            class="form-control"
+            type="number"
+            placeholder="phone..."
+            formControlName="phone"
+          />
+        </div>
+        <div formGroupName="address" class="form-group address">
+          <label> <i class="fa fa-map-marker-alt"></i> Address</label>
+          <div class="row">
+            <div class="col-md-3">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="country..."
+                formControlName="country"
+              />
+            </div>
+            <div class="col-md-3">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="state..."
+                formControlName="state"
+              />
+            </div>
+            <div class="col-md-3">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="city..."
+                formControlName="city"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="form-group inp-error"
+          *ngIf="f.address.touched && f.address.invalid"
+        >
+          <p>
+            <strong>full address required</strong>
+          </p>
+        </div>
+        <div class="form-group">
+          <i class="fa fa-lock"></i>
+          <input
+            class="form-control"
+            type="password"
+            placeholder="password..."
+            formControlName="password"
+          />
+        </div>
+        <div class="form-group">
+          <button
+            [disabled]="signupData.invalid || loading"
+            class="btn form-control btn-light"
+          >
+            signup
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-sm-6 col-md-6" style="text-align: center">
+      <h6>
+        already have account ?
+        <strong><a routerLink="/auth/signin">signin now</a></strong>
+      </h6>
+    </div>
+  </div>
+</div>

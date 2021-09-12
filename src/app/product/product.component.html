@@ -1,0 +1,31 @@
+<div class="single-product">
+  <div *ngIf="product.discount" class="discount">
+    <strong>{{ product.discount }} %</strong>
+  </div>
+  <div class="product-img">
+    <img [src]="product.images[2]" alt="" />
+  </div>
+
+  <div class="product-info">
+    <h4>{{ product.brand }} {{ product.model }}</h4>
+    <p>{{ product.describtion }}</p>
+  </div>
+  <div class="product-price">
+    <p *ngIf="product.discount != 0" style="text-decoration: line-through">
+      {{ product.price }} $
+    </p>
+    <p>{{ salePrice(product.price, product.discount) }} $</p>
+  </div>
+  <div *ngIf="!hiddeBtns" class="product-btns">
+    <button
+      class="btn"
+      [routerLink]=""
+      [routerLink]="['/products', product._id]"
+    >
+      <i class="fa fa-info-circle"></i> details
+    </button>
+    <button (click)="addProduct(product._id)" class="btn">
+      <i class="fa fa-cart-plus"></i> add to cart
+    </button>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 25px auto;
+}
+.no-product img {
+  height: 250px;
+  width: 450px;
+}

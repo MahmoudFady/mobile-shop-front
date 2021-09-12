@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <app-product [product]="product" [hiddeBtns]="true"></app-product>
+      <app-product-details [product]="product"></app-product-details>
+    </div>
+    <div class="col-md-6">
+      <app-product-comments
+        [comments]="product.comments"
+      ></app-product-comments>
+    </div>
+  </div>
+</div>

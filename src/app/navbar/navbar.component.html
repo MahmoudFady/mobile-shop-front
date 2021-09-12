@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">souqy</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            aria-current="page"
+            routerLink="/home"
+            routerLinkActive="active"
+          >
+            <i class="fa fa-home"></i> Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/products/mobiles"
+            routerLinkActive="active"
+          >
+            <i class="fa fa-mobile-alt"></i> mobiles</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-laptop"></i> computers</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/cart" routerLinkActive="active">
+            <span class="productCountInCart">{{ productCountInCart }}</span>
+            <i class="fa fa-shopping-cart"></i> cart
+          </a>
+        </li>
+        <li *ngIf="!isAuth" class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/auth/signin"
+            routerLinkActive="active"
+          >
+            <i class="fa fa-sign-in-alt"></i>
+            sign in</a
+          >
+        </li>
+        <li *ngIf="!isAuth" class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/auth/signup"
+            routerLinkActive="active"
+          >
+            <i class="fa fa-user-plus"></i> sign up</a
+          >
+        </li>
+        <li *ngIf="isAuth" class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/user/profile"
+            routerLinkActive="active"
+          >
+            <i class="fa fa-user-circle"></i> profile</a
+          >
+        </li>
+        <li *ngIf="isAuth" class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/home"
+            (click)="logout()"
+            style="cursor: pointer"
+          >
+            <i class="fa fa-sign-out-alt"></i> logout</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/search" routerLinkActive="active">
+            <i class="fa fa-search"></i> search
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
